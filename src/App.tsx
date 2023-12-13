@@ -1,35 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { View } from "react-native";
+import ChatScreen from './screens/ChatScreen/ChatScreen';
 
 function App(): React.ReactElement {
   return (
     <>
-      <Text>
-        Test screen Test screen Test screen Test screen Test 
-        screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test 
-        screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test 
-        screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test 
-        screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screenTest screen Test screen Test screen Test screen Test 
-        screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-        Test screen Test screen Test screen Test screen Test screen
-      </Text>
+      <View style={{ flex: 1, paddingTop: 20, paddingBottom: 20 }}>
+        <ChatScreen />
+      </View>
     </>
   );
 }
