@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import Chat from './../../components/Chat/Chat/Chat';
+import Chat from '../../components/ChatModule/Chat/Chat';
 
 const ChatScreen = () => {
   return (

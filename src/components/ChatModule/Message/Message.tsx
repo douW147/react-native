@@ -1,20 +1,19 @@
 import { Text, View } from "react-native";
 import Avatar from "@app/components/Avatar/Avatar";
-
 import defaultStyles from './styles';
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { User } from "@app/components/interfaces/user";
 import { Message } from "@app/components/interfaces/Message";
 
-export interface ChatMessageProps {
-  id: string
-  text: string
-  from: User,
-  sourceReply?: Message
-  isMyMessage: boolean
+export interface MessageProps {
+  id: string;
+  text: string;
+  from: User;
+  sourceReply?: Message;
+  isMyMessage: boolean;
 }
 
-const ChatMessage = ({ id, text, from, sourceReply, isMyMessage }: ChatMessageProps) => {
+const MessageContainer = ({ id, text, from, sourceReply, isMyMessage }: MessageProps) => {
   const styles = defaultStyles({ isMyMessage });
 
   return (
@@ -50,4 +49,4 @@ const ChatMessage = ({ id, text, from, sourceReply, isMyMessage }: ChatMessagePr
   )
 }
 
-export default ChatMessage;
+export default MessageContainer;

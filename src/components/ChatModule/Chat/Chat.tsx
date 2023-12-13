@@ -3,8 +3,8 @@ import defaultStyles from './styles';
 import { useState } from 'react';
 import { Message } from '@app/components/interfaces/Message';
 import ChatBar from '../ChatBar/ChatBar';
-import ChatBoard from '../ChatBoard/ChatBoard';
-import ChatControlPanel from '../ChatControlPanel/ChatControlPanel';
+import MessagesScroll from '../MessagesScroll/MessagesScroll';
+import MessageSender from '../MessageSender/MessageSender';
 import { User } from '@app/components/interfaces/user';
 
 const Chat = () => {
@@ -43,9 +43,9 @@ const Chat = () => {
     <View style={styles.root}>
       <ChatBar />
       <View style={styles.board}>
-        <ChatBoard messages={messages} userId={'3'} />
+        <MessagesScroll messages={messages} userId={'3'} />
       </View>
-      <ChatControlPanel onAddMessage={handleAddMessage} />
+      <MessageSender onAddMessage={handleAddMessage} />
     </View>
   );
 }

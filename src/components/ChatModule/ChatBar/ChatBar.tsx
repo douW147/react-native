@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
 import defaultStyles from './styles';
-import IconButton from './../../../components/IconButton/IconButton';
+import IconButton from '../../IconButton/IconButton';
 import BackButton from '@app/components/BackButton/BackButton';
 
 function ChatBar() {

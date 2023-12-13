@@ -1,20 +1,20 @@
 import { ScrollView } from "react-native";
 import defaultStyles from './styles';
 import { Message } from "@app/components/interfaces/Message";
-import ChatMessage from "../ChatMessage/ChatMessage";
+import MessageContainer from "../Message/Message";
 
-interface ChatBoardProps {
+interface MessagesScrollProps {
   messages: Message[];
   userId: string;
 };
 
-const ChatBoard = ({ messages, userId }: ChatBoardProps) => {
+const MessagesScroll = ({ messages, userId }: MessagesScrollProps) => {
   const styles = defaultStyles();
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
       {messages.map((message) => 
-        <ChatMessage
+        <MessageContainer
           id={message.id}
           key={message.id}
           text={message.text}
@@ -27,4 +27,4 @@ const ChatBoard = ({ messages, userId }: ChatBoardProps) => {
   );
 }
 
-export default ChatBoard;
+export default MessagesScroll;

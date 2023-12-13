@@ -1,13 +1,13 @@
 import { View } from "react-native";
-import ChatInput from "@app/components/Chat/ChatInput/ChatInput";
+import MessageInput from "../MessageInput/ChatInput";
 import defaultStyles from './styles';
-import IconButton from "./../../../components/IconButton/IconButton";
+import IconButton from "../../IconButton/IconButton";
 
-interface ChatControlPanelProps {
+interface MessageSenderProps {
   onAddMessage: (text: string) => void;
 };
 
-function ChatControlPanel({ onAddMessage }: ChatControlPanelProps) {
+const MessageSender = ({ onAddMessage }: MessageSenderProps) => {
   const styles = defaultStyles();
 
   const handlePressEnter = (text: string): void => {
@@ -24,7 +24,7 @@ function ChatControlPanel({ onAddMessage }: ChatControlPanelProps) {
           />
         </View>
         <View style={styles.inputContainer}>
-          <ChatInput onPressEnter={handlePressEnter} />
+          <MessageInput onPressEnter={handlePressEnter} />
         </View>
         <View>
           <IconButton
@@ -37,4 +37,4 @@ function ChatControlPanel({ onAddMessage }: ChatControlPanelProps) {
   );
 }
 
-export default ChatControlPanel;
+export default MessageSender;

@@ -1,14 +1,13 @@
 import { TextInput, View } from "react-native";
-
 import defaultStyles from './styles';
 import { useState } from "react";
-import IconButton from "./../../../components/IconButton/IconButton";
+import IconButton from "../../IconButton/IconButton";
 
-interface ChatInputProps {
+interface MessageInputProps {
   onPressEnter: (text: string) => void;
 };
 
-const ChatInput = ({ onPressEnter }: ChatInputProps) => {
+const MessageInput = ({ onPressEnter }: MessageInputProps) => {
   const styles = defaultStyles();
   const [textInput, setTextInput] = useState<string>('')
 
@@ -40,4 +39,4 @@ const ChatInput = ({ onPressEnter }: ChatInputProps) => {
   )
 }
 
-export default ChatInput;
+export default MessageInput;
