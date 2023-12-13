@@ -9,6 +9,7 @@ export default (): ChatBoardStyle => {
     content: {
       flexGrow: 1,
       gap: 10,
+      overflow: 'scroll',
     }
   });
 }

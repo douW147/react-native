@@ -1,11 +1,11 @@
 import { StyleSheet, ViewStyle } from "react-native";
 
-export interface ChatControlPanelStyles {
+export interface MessageSenderStyles {
   root: ViewStyle;
   inputContainer: ViewStyle;
 }
 
-export default (): ChatControlPanelStyles => {
+export default (): MessageSenderStyles => {
   return StyleSheet.create({
     root: {
       width: '100%',
