@@ -1,15 +1,27 @@
-import { ImageStyle, StyleSheet } from 'react-native';
+import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from "react-native";
 
-export type AvatarStyle = {
-  image: ImageStyle;
+export type Avatar = {
+  root: ViewStyle
+  image: ImageStyle
+  label: TextStyle
 }
 
-export default (): AvatarStyle => {
+
+export default ({ size }: { size: number }): Avatar => {
   return StyleSheet.create({
-    image: {
-      width: 50,
-      height: 50,
-      borderRadius: 50,
+    root: {
+      alignItems: 'center'
     },
-  });
+    image: {
+      width: size,
+      height: size,
+      borderRadius: size / 2,
+    },
+    label: {
+      maxWidth: size,
+      width: '100%',
+      textAlign: 'center',
+      fontWeight: '700',
+    }
+  })
 }

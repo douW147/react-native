@@ -1,17 +1,30 @@
-import { Image, View } from 'react-native';
+import { Image, Text, View } from "react-native";
+
 import defaultStyles from './styles';
 
-const Avatar = () => {
-  const styles = defaultStyles();
+interface AvatarProps {
+  source: any
+  size: number
+  label?: string
+}
+
+function Avatar({ source, size, label }: AvatarProps) {
+  const styles = defaultStyles({ size });
+  const isLabelEmpty = label === '';
 
   return (
-    <View>
-      <Image
-        style={styles.image}
-        source={require('../../assets/img/cat-avatar.jpeg')}
-      />
-    </View>
-  );
+    <>
+      <View style={styles.root}>
+        <Image
+          style={styles.image}
+          source={source}
+        />
+        {!isLabelEmpty && <Text style={styles.label}>
+          {label}
+        </Text>}
+      </View>
+    </>
+  )
 }
 
 export default Avatar;

@@ -4,6 +4,7 @@ import defaultStyles from './styles';
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { User } from "@app/components/interfaces/user";
 import { Message } from "@app/components/interfaces/Message";
+import ChatAvatar from "../ChatAvatar/ChatAvatar";
 
 export interface MessageProps {
   id: string;
@@ -21,7 +22,7 @@ const MessageContainer = ({ id, text, from, sourceReply, isMyMessage }: MessageP
       <View style={styles.root}>
         <View style={styles.content}>
           <View>
-            <Avatar />
+            <ChatAvatar />
           </View>
           <View style={styles.contentContainer}>
             {sourceReply && <>
