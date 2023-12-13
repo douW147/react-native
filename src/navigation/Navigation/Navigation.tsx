@@ -4,6 +4,7 @@ import CustomDrawerContent from "@app/navigation/CustomDrawerContent/CustomDrawe
 import TabNavigation from "@app/navigation/TabNavigation/TabNavigation";
 import ChatScreen from "@app/screens/ChatScreen/ChatScreen";
 import { NavigationContainer } from "@react-navigation/native";
+import ArticlesScreen from "@app/screens/ArticlesScreen/ArticlesScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -27,6 +28,13 @@ function Navigation() {
             component={ChatScreen}
             options={{
               drawerLabel: 'Чат',
+            }}
+          />
+          <Drawer.Screen
+            name='Posts'
+            component={ArticlesScreen}
+            options={{
+              drawerLabel: 'Новини'
             }}
           />
         </Drawer.Navigator>
